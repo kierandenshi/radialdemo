@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <title>thing</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="radialdemo">
+
+        <div class="radial-progress" data-progress="0">
+            <div class="circle">
+                <div class="mask full">
+                    <div class="fill"></div>
+                </div>
+                <div class="mask half">
+                    <div class="fill"></div>
+                    <div class="fill fix"></div>
+                </div>
+            </div>
+            <div class="inset">
+                <div class="percentage">
+                    <span>0%</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script>
+
+    $(function(){
+        $('.dialog-box-check').on('click', function() {
+            $(this).closest('.dialog-box-wrapper').toggleClass('completed');
+        });
+        $('.dialog-box-showmore').on('click', function() {
+            $(this).toggleClass('open').siblings('.dialog-box-more').toggleClass('open');
+        });
+
+        $('.radial-progress').on('click', function() {
+            var n = Math.floor(Math.random() * 100),
+                r = (180/100) * n;
+            $('.mask.full').css('transform','rotate(' + r + 'deg)');
+            $('.fill').css('transform','rotate(' + r + 'deg)');
+            $('.fill.fix').css('transform', 'rotate(' + r*2 + 'deg)');
+            $('.percentage span').html(n+'%');
+        });
+    });
+
+    </script>
+
+</body>
+</html>

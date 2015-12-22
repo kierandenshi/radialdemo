@@ -1,0 +1,48 @@
+.radialdemo {
+  padding: 50px; }
+  .radialdemo .radial-progress {
+    margin: 50px;
+    width: 120px;
+    height: 120px;
+    background-color: #d6dadc;
+    border-radius: 50%; }
+    .radialdemo .radial-progress .circle .mask, .radialdemo .radial-progress .circle .fill, .radialdemo .radial-progress .circle .shadow {
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      border-radius: 50%; }
+    .radialdemo .radial-progress .circle .mask, .radialdemo .radial-progress .circle .fill {
+      -webkit-backface-visibility: hidden;
+      transition: -webkit-transform 1s;
+      transition: -ms-transform 1s;
+      transition: transform 1s;
+      border-radius: 50%; }
+    .radialdemo .radial-progress .circle .mask {
+      clip: rect(0px, 120px, 120px, 60px); }
+      .radialdemo .radial-progress .circle .mask .fill {
+        clip: rect(0px, 60px, 120px, 0px);
+        background-color: #97a71d; }
+    .radialdemo .radial-progress .inset {
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      margin-left: 15px;
+      margin-top: 15px;
+      background-color: #fbfbfb;
+      border-radius: 50%; }
+      .radialdemo .radial-progress .inset .percentage {
+        height: 22px;
+        width: 57px;
+        overflow: hidden;
+        position: absolute;
+        top: 34px;
+        left: 16.5px;
+        line-height: 1; }
+        .radialdemo .radial-progress .inset .percentage span {
+          width: 57px;
+          display: inline-block;
+          vertical-align: top;
+          text-align: center;
+          color: #97a71d; }
+
+/*# sourceMappingURL=index.css.map */
