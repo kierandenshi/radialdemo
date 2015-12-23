@@ -34,13 +34,6 @@
     <script>
 
     $(function(){
-        $('.dialog-box-check').on('click', function() {
-            $(this).closest('.dialog-box-wrapper').toggleClass('completed');
-        });
-        $('.dialog-box-showmore').on('click', function() {
-            $(this).toggleClass('open').siblings('.dialog-box-more').toggleClass('open');
-        });
-
         $('.radial-progress').on('click', function() {
             var n = Math.floor(Math.random() * 100),
                 r = (180/100) * n;
